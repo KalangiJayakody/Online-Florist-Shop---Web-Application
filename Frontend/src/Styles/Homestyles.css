@@ -1,0 +1,42 @@
+.home{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    background-size: cover;
+   flex-direction: column;
+   background-position: center;
+   background-repeat: no-repeat;
+
+}
+
+.headerContainer{
+    width: auto;
+    margin-left: 30px;
+}
+
+.headerContainer h1{
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 10vh;
+}
+
+.headerContainer button{
+    background-color: black;
+    margin: 20px;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.headerContainer button:hover{
+    background-color: cornflowerblue;
+    cursor: pointer;
+    transition: 2s ease-in;
+}
