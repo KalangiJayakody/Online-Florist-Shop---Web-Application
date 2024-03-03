@@ -15,7 +15,7 @@ import Webshopcontext, { Shopcontext } from './Context/Webshopcontext';
 function App() {
   return (
     <div>
-      
+      <Webshopcontext>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Homepage/>}/>
@@ -29,7 +29,7 @@ function App() {
          
         </Routes>
       </BrowserRouter>
-  
+      </Webshopcontext>
     </div>
   );
 }

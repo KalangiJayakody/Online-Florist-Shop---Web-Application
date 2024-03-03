@@ -36,6 +36,9 @@ const Header = () => {
                 <li>
                   <Link to={"/webshop"}>Webshop</Link>
                 </li>
+                <li>
+                  <Link to={"/cart"}>Cart</Link>
+                </li>
               </ul>
     
     </Box>
@@ -78,6 +81,9 @@ const Header = () => {
                 </li>
                 <li>
                   <Link to={"/webshop"}>Webshop</Link>
+                </li>
+                <li>
+                  <Link to={"/cart"}>Cart</Link>
                 </li>
               </ul>
             </Box>

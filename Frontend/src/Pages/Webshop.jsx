@@ -18,7 +18,7 @@ const Webshop = () => {
           <h1>My Shopping</h1>
         </div>
       
-        <div className='items'>{ITEMS.map((item)=> <Item data={item}/> )}
+        <div className='items'>{ITEMS.map((item)=> <Item data={item} /> )}
         </div>
       </div>
       
