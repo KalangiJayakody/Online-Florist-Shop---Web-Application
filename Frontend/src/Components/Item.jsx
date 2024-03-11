@@ -1,33 +1,28 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import Webshopcontext from '../Context/Webshopcontext';
-import {Shopcontext} from '../Context/Webshopcontext'
+// Item.js
 
-const Item = (props) => {
-    const {item_id,item_name ,item_price,item_image} =props.data;
+import React, { useContext } from 'react';
+import { Shopcontext } from '../Context/Webshopcontext';
+import "../Styles/Item.css";
 
-    const {addToCart,cartItems, removeFromCart}=useContext(Shopcontext);
+const Item = ({ data, onItemClick }) => {
+  const { item_id, item_name, item_price, item_image } = data;
+  const { addToCart, cartItems, removeFromCart } = useContext(Shopcontext);
+  const cartItemAmount = cartItems[item_id] || 0;
 
-    const cartItemAmount=cartItems[item_id];
-    
   return (
     <div className='item'>
-      <img src={item_image} />
-      <div className='description'>
-        <p>
-          <b>{item_name}</b>
-        </p>
-        <p>{item_price}</p>
-
-        <div>
-         <button onClick={()=>addToCart(item_id)}>Add to Cart {cartItemAmount > 0}</button>
-         <p>{cartItemAmount>0 && <>{cartItemAmount}</>}</p>
-         <button onClick={()=>removeFromCart(item_id)}>Remove to Cart{cartItemAmount > 0} </button>
+      <img src={item_image} onClick={() => onItemClick(data)} />
+      <div className='description' style={{textAlign:'center'}}>
+        <p style={{marginTop:'5%'}}><b>{item_name}</b></p>
+        <p style={{marginBottom:'5%',marginTop:'3%'}}>{item_price}</p>
+        <div className="buttonContainer">
+          <button className='addToCartButton' onClick={() => addToCart(item_id)}>+</button>
+          <p style={{fontFamily:'Poppins', fontWeight:'bold',paddingBottom:'1vh',paddingRight:'1vh',paddingLeft:'1vh'}}>{cartItemAmount > 0 && cartItemAmount}</p>
+          <button className='addToCartButton' onClick={() => removeFromCart(item_id)}>-</button>
         </div>
       </div>
-      
     </div>
-  )
-}
+  );
+};
 
-export default Item
+export default Item;

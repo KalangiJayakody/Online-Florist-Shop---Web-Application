@@ -12,7 +12,12 @@ import Cart from './Pages/Cart';
 import Webshopcontext, { Shopcontext } from './Context/Webshopcontext';
 
 
+
+
 function App() {
+
+
+
   return (
     <div>
       <Webshopcontext>

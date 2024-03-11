@@ -1,20 +1,31 @@
-.addToCartButton:hover{
-    background-color: rgb(19, 19, 19);
-    color: white;
-    cursor: pointer;
-}
+.background-image {
+    height: 10vh; /* Set the height to cover the entire viewport */
+    background-size: cover; /* Make sure the background image covers the entire div */
+  }
 
-.addToCartButton{
-    background-color: transparent;
-    border: 2px solid rgb(19, 19, 19);
-    min-width: 100px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 15px;
+.shopTitle {
+    text-align: center;
+    background-color: #eea8a8;
+    max-width: 100%;
+    padding: 1vh;
+    margin: auto; 
+    margin-top: 0vh;
+    border-radius: 5px;
 }
+  
+  .items {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+  }
+  
+  .item img {
+    width: 200px;
+  }
 
+ 
 .item:hover{
     transition: 0.3s ease-in;
     cursor: pointer;
@@ -32,40 +43,7 @@
     place-items: center;
 }
 
-.item{
-    border-radius: 15px;
-    width: 300px;
-    height: 350px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.item img{
-    width: 200px;
-}
 
-.nav_box{
-    width: 100%;
-    margin:auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.my_shop{
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: rgb(237, 169, 24);
-    font-family: cursive;
-    cursor: pointer;
-}
-.cart{
-    cursor: pointer;
-}
-.cart_icon{
-    color: blue;
-}
 
 

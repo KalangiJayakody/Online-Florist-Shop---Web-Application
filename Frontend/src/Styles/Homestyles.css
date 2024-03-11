@@ -1,42 +1,87 @@
 .home{
     height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    background-size: cover;
-   flex-direction: column;
-   background-position: center;
-   background-repeat: no-repeat;
-
-}
-
-.headerContainer{
-    width: auto;
-    margin-left: 30px;
-}
-
-.headerContainer h1{
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 10vh;
-}
-
-.headerContainer button{
-    background-color: black;
-    margin: 20px;
-    border:none;
-    border-radius: 5px;
-    cursor: pointer;
-    height: 50px;
-    width: 150px;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-}
-
-.headerContainer button:hover{
-    background-color: cornflowerblue;
-    cursor: pointer;
-    transition: 2s ease-in;
-}
+     display: flex;
+     justify-content: center;
+     align-items: left;
+     background-size: cover;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat; 
+ 
+    position: relative;
+   width: 100%;
+ 
+ 
+ }
+ 
+ .contentContainer button{
+     background-color: black;
+     margin: 20px;
+     border:none;
+     border-radius: 5px;
+     cursor: pointer;
+     height: 50px;
+     width: 150px;
+     text-decoration: none;
+     color: white;
+     font-size: 20px;
+ }
+ 
+ .contentContainer button:hover{
+     background-color: #49c530;
+     cursor: pointer;
+     transition: 2s ease-in;
+ }
+ 
+ 
+ 
+ .contentContainer {
+     position: absolute;
+     top: 50%;
+     left: 5%;
+     transform: translateY(-50%);
+     text-align: left;
+     color: black;
+     
+     border-radius: 10px;
+     padding: 20px;
+   }
+ 
+   .backgroundWithOpacity {
+     background-color: rgba(255, 255, 255, 0.8); /* Background color with 70% opacity */
+     padding: 20px;
+     border-radius: 10px;
+   }
+   
+   .contentContainer h1 {
+     font-size: 10vh;
+     justify-content: center;
+     align-items: center;
+     font-weight: bold;
+   }
+   
+   .contentContainer p {
+     font-size: 1rem;
+     margin-top: 1rem;
+   }
+ 
+   .backgroundWithOpacity {
+     font-family: 'Poppins', sans-serif;
+     text-align: center;
+     padding: 50px;
+   }
+   
+   .backgroundWithOpacity h1 {
+     font-size: 3em;
+     font-weight: bold;
+     color: #ffffff;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   }
+   
+   .backgroundWithOpacity p {
+     font-size: 1.5em;
+     color: #ffffff;
+     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+     margin: 20px 0;
+   }
+   

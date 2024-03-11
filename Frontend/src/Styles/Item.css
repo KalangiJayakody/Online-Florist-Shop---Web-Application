@@ -1,0 +1,60 @@
+.addToCartButton {
+    margin-bottom: 1vh;
+    background-color: transparent;
+    border: 2px solid rgb(19, 19, 19);
+    min-width: 50px;
+    padding: 5px 10px; /* Adjusted padding */
+    border-radius: 15px;
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s ease-in, color 0.3s ease-in; /* Add transition for smooth effect */
+  }
+  
+  .addToCartButton:hover {
+    background-color: rgb(19, 19, 19);
+    color: white;
+    cursor: pointer;
+  }
+
+  .item {
+    border-radius: 10px; /* Adjusted border radius */
+    width: 350px;
+    height: 350px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent; /* Add border for hovering effect */
+    transition: border-color 0.3s ease-in; /* Add transition for smooth effect */
+  }
+  
+    
+  .item:hover {
+    border-color: rgb(19, 19, 19); /* Change border color on hover */
+    cursor: pointer;
+    background-color: #EEF296;
+  }
+
+  .item img {
+    width: 200px;
+  }
+
+ 
+.item:hover{
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+.item.description{
+    text-align: center;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.buttonContainer button {
+  margin-right: 5px; /* Add spacing between buttons */
+}
+

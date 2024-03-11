@@ -1,30 +1,45 @@
-import React,{useState} from 'react'
-import Layout from '../Components/Layout/Layout'
-import { Link } from 'react-router-dom'
-import {ITEMS} from '../Components/Items'
-import Item from '../Components/Item'
-import '../Styles/Webshop.css'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Navbar2 from '../Components/Navbar2'
-import car2 from '../Components/car2'
-import Amazon from '../Components/Amazon'
+// Webshop.js
+
+import React, { useState } from 'react';
+import Layout from '../Components/Layout/Layout';
+import { ITEMS } from '../Components/Items';
+import Item from '../Components/Item';
+import ItemDetailsModal from '../Components/ItemDetailsModal';
+import '../Styles/Webshop.css';
+import { Typography } from '@mui/material';
+import webshopimage1 from "../Images/webshopimage1.jpg";
 
 const Webshop = () => {
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedItem(null);
+    setModalOpen(false);
+  };
+
   return (
     <Layout>
-
       <div className='shop'>
+        <img src={webshopimage1} style={{ width: '100%', height: '25vh' }} />
         <div className='shopTitle'>
-          <h1>My Shopping</h1>
+          <Typography style={{ fontSize: '40px', fontFamily: 'Poppins' }}>Latest Products</Typography>
         </div>
-      
-        <div className='items'>{ITEMS.map((item)=> <Item data={item} /> )}
+        <div className='items'>
+          {ITEMS.map((item) => (
+            <Item key={item.item_id} data={item} onItemClick={handleItemClick} />
+          ))}
         </div>
       </div>
-      
 
+      <ItemDetailsModal open={modalOpen} handleClose={handleCloseModal} item={selectedItem} />
     </Layout>
-  )
-}
+  );
+};
 
-export default Webshop
+export default Webshop;
