@@ -3,6 +3,7 @@ import Layout from '../Components/Layout/Layout'
 import { Link } from 'react-router-dom'
 import Homeui from '../Images/Home4.jpg'
 import '../Styles/Homestyles.css'
+import Layout2 from '../Components/Layout/Layout2'
 
 import Carousel from '../Components/Carousel'
 
@@ -16,7 +17,7 @@ const Homepage = () => {
   const images = [Home8,Home6,Home7];
 
   return (
-    <Layout>
+    <Layout2>
       <div className="home" /*style={{backgroundImage : `url(${Homeui})`}}*/>
       <Carousel images={images}/> 
          <div className="contentContainer">
@@ -35,16 +36,16 @@ const Homepage = () => {
 </div>
 
           <Link to="/login">
-          <button>LOGIN</button>
+          <button style={{marginLeft:'15vh'}}>LOGIN</button>
           </Link>
           <Link to="/signup">
-          <button>SIGN UP</button>
+          <button style={{marginLeft:'10vh'}}>SIGN UP</button>
           </Link>
              
         </div>
         
       </div>
-    </Layout>
+    </Layout2>
   )
 }
 

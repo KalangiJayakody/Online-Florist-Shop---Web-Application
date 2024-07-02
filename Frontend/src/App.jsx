@@ -10,6 +10,7 @@ import Login from './Pages/Login';
 import Signup from './Pages/Signup';
 import Cart from './Pages/Cart';
 import Webshopcontext, { Shopcontext } from './Context/Webshopcontext';
+import Checkout from './Pages/Checkout';
 
 
 
@@ -30,6 +31,7 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/signup' element={<Signup/>}/>
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='/checkout' element={<Checkout/>}/>
           <Route path='*' element={<Pagenotfound/>}/>
          
         </Routes>
