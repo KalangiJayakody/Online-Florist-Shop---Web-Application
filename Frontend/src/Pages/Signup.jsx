@@ -4,6 +4,7 @@ import { Avatar, Button, Grid, Paper, TextField, Typography } from '@mui/materia
 import { Link } from 'react-router-dom';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import axios from 'axios';
+import Layout2 from '../Components/Layout/Layout2';
 
 const Signup = () => {
 
@@ -26,7 +27,7 @@ const Signup = () => {
 
   return (
     <div style={{ backgroundColor: '#F8FFD2', height: '100vh' }} >
-       <Layout>
+       <Layout2>
         
         <Grid>
           
@@ -52,7 +53,7 @@ const Signup = () => {
           </Paper>
         </Grid>
    
-    </Layout>
+    </Layout2>
     </div>
   )
 }

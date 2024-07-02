@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../Components/Layout/Layout'
 import { Box, Typography } from '@mui/material'
+import Layout2 from '../Components/Layout/Layout2'
 
 import "../Styles/About.css"
 
@@ -12,7 +13,7 @@ import story1 from '../Images/story1.jpg'
 
 const About = () => {
   return (
-    <Layout>
+    <Layout2>
        <div className="about-container">
         <div className="story1-container">
           <img src={story3} alt="Story1" className="story3-image" />
@@ -77,7 +78,7 @@ const About = () => {
         </div>
       </div>
       
-    </Layout>
+    </Layout2>
   )
 }
 

@@ -1,12 +1,13 @@
 .addToCartButton {
     margin-bottom: 1vh;
-    background-color: transparent;
+    background-color: white;
     border: 2px solid rgb(19, 19, 19);
     min-width: 50px;
     padding: 5px 10px; /* Adjusted padding */
     border-radius: 15px;
     text-align: center; /* Center the text */
     transition: background-color 0.3s ease-in, color 0.3s ease-in; /* Add transition for smooth effect */
+    color: black;
   }
   
   .addToCartButton:hover {
@@ -51,10 +52,12 @@
 
 .buttonContainer {
   display: flex;
-  align-items: center; /* Align items vertically */
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Center the buttons vertically */
+  margin-top: 10px; 
 }
 
 .buttonContainer button {
-  margin-right: 5px; /* Add spacing between buttons */
+  margin: 0 5px; /* Add spacing between buttons */
 }
 

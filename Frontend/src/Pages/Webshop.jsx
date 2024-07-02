@@ -9,7 +9,11 @@ import '../Styles/Webshop.css';
 import { Typography } from '@mui/material';
 import webshopimage1 from "../Images/webshopimage1.jpg";
 
+
+import axios from 'axios';
+
 const Webshop = () => {
+  const [flowerItems, setFlowerItems] = useState([]); // State to store flower items
   const [selectedItem, setSelectedItem] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -23,6 +27,8 @@ const Webshop = () => {
     setModalOpen(false);
   };
 
+  
+
   return (
     <Layout>
       <div className='shop'>
@@ -32,12 +38,13 @@ const Webshop = () => {
         </div>
         <div className='items'>
           {ITEMS.map((item) => (
-            <Item key={item.item_id} data={item} onItemClick={handleItemClick} />
+            <Item key={item.item_id} data={item} onItemClick={handleItemClick}  showButtons={true} />
           ))}
         </div>
       </div>
 
       <ItemDetailsModal open={modalOpen} handleClose={handleCloseModal} item={selectedItem} />
+      
     </Layout>
   );
 };
